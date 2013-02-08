@@ -6,6 +6,22 @@ using namespace std;
   A collection of ways to create segmentation faults
 */
 
+void gangsterString()
+{
+	// an innocent char pointer ...
+	char* name = (char*) "LLCoolJ"; // c-style cast to avoid warnings
+	// we don't take too kindly to them rappers..
+	// Lower-case that gangsta!
+	while (*name)
+	{
+		if (*name >= 'a' && *name <= 'z')
+			*name -= 32;
+		name++;
+	}
+
+	cout << *name << endl;
+}
+
 void stackExplosion(){
   cout << "Exploding the stack..." << endl;
   //OK: 
