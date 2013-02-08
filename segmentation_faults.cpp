@@ -14,8 +14,8 @@ void gangsterString()
 	// Lower-case that gangsta!
 	while (*name)
 	{
-		if (*name >= 'a' && *name <= 'z')
-			*name -= 32;
+		if (*name >= 'A' && *name <= 'Z')
+			*name += 32;
 		name++;
 	}
 
